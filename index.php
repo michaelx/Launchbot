@@ -19,7 +19,7 @@
 	<title>Launchbot &ndash; Your Personal Startpage Script</title>
 	<link rel="shortcut icon" href="favicon.gif" type="image/gif">
 	<meta name="keywords" content="Launchbot, Startpage, Script, PHP, Michael Xander, Open-Source">
-	<meta name="description" content="Launchbot enables you to easily open Sets of all your favorite Websites with just one Click. It's like restoring Tabs, but on any Computer and Browser. Additional you can use the build in Google Search Bar for a fresh start. Uhw, and certainly this is not all!">
+	<meta name="description" content="Launchbot enables you to easily open Sets of all your favorite Websites with just one click. It's like restoring Tabs, but on any Computer and Browser. Additional you can use the built in Google Search Bar for a fresh start. Uhw, and certainly this is not all!">
 	<meta name="author" content="Michael Xander">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="http://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css" >
