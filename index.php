@@ -68,7 +68,7 @@
 					
 	</div>
 	<div id="footer">
-		<p>&copy; 2011 <a href="http://michaelxander.de" target="_blank">Michael Xander</a>.  
+		<p>&copy; 2012 <a href="http://michaelxander.de" target="_blank">Michael Xander</a>.  
 		<a href="http://launchbot.michaelxander.de/about.html">Download and about Launchbot.</a>
 		Follow me on <a href="http://twitter.com/michael_xander" target="_blank">Twitter</a> for further projects.
 		</p>
