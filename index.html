@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+	<title>Launchbot &ndash; Your Personal Startpage Script</title>
+	<meta name="keywords" content="Launchbot, Startpage Script, Michael Xander, Dashboard, Open-Source, Morning Coffee">
+	<meta name="description" content="Launchbot enables you to easily open sets of all your favorite websites with one click. It's like restoring tabs, but on any computer and browser.">
+	<meta name="author" content="Michael Xander">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="shortcut icon" href="images/favicon.gif">
+	<link rel="apple-touch-icon" href="images/images/favicon.gif">
+
+</head>
+<body OnLoad="document.searchForm.q.focus();">
+
+	<div class="container">
+		<div class="sixteen columns">
+			<h1 class="remove-bottom" style="margin-top: 40px"><img class="middle" src="images/launchbot-logo.png" alt="Launchbot Logo" /> &lt; Launchbot &gt;</h1>
+			<hr />
+		</div>
+		<div class="one-third column">
+			<h3>Search The Web</h3>
+			<p>My oil is fresh, we could search something!</p>
+			<form method="get" action="http://www.google.com/search" id="searchForm" name="searchForm">
+				<fieldset>
+					<input type="text" name="q" maxlength="255" id="searchText" value="" />
+					<input type="submit" id="searchSubmit" value="GO" />
+				</fieldset>
+			</form>
+		</div>
+		<div class="one-third column">
+			<h3>Open Sets</h3>
+			<p>Oh yeah Sir, let's open -g some sites!</p>
+			<ul class="square" id="siteSets"></ul>
+		</div>
+		<div class="one-third column">
+			<h3>Favorite Sites</h3>
+			<p>Ah, you wanna surf the orbit?</p>
+			<p id="favoriteSites"></p>
+		</div>
+		<div class="sixteen columns">
+			<p class="footer">&copy; 2012 <a href="http://michaelxander.de" target="_blank">Michael Xander</a>.  
+			<a href="http://launchbot.michaelxander.de/about.html">Download and about Launchbot.</a>
+			Follow me on <a href="http://twitter.com/michael_xander" target="_blank">Twitter</a> for further projects.
+			</p>
+		</div>
+
+	</div><!-- container -->
+
+
+	<!-- Launchbot Organs
+	================================================== -->
+	<script type="text/javascript">
+
+		/* Configuration */
+		// 1) Favorite Sites: enter your urls without 'http://'
+		var favSites = ["michaelxander.de", "google.com","mail.google.com", "docs.google.com", "twitter.com", "hootsuite.com", "pinterest.com", "dribbble.com", "apple.com", "facebook.com"];
+		// 2) Sets: enter your urls without 'http://'. First array element is the name of the set.
+		var siteSets = [ ["morning set", "nytimes.com", "spiegel.de", "macstories.net", "stadt-bremerhaven.de", "onethingwell.org"], ["NYC", "michaelxander.de/static/nyc-cams.html", "hellonewyork.us", "ileftmyheartinmanhattan.tumblr.com", "newyork-ny-130.tumblr.com", "candidnewyork.tumblr.com"] ];
+		/* Configuration finished */
+
+
+		var favs = "";
+		var setOutput;
+
+		for (var i in favSites) {
+			favs += "<a href=\"http://" +favSites[i]+ "\" title=\"" +favSites[i]+ "\" target=\"_blank\"><img src=\"http://g.etfv.co/http://" +favSites[i]+ "\" alt=\"" +favSites[i]+ "\" width=\"16\" height=\"16\"></a> ";
+		};
+		document.getElementById("favoriteSites").innerHTML = favs;
+
+		
+		for (var i = 0; i < siteSets.length; i++) {
+
+			setOutput = "<li><a href=\"#\" onClick=\"";
+			
+			for (var u = 1; u < siteSets[i].length; u++) {
+				setOutput += "window.open('http://" +siteSets[i][u]+ "');";
+			};
+			
+			setOutput += "\">" +siteSets[i][0]+ "<\/a> <br>";
+
+			for (var u = 1; u < siteSets[i].length; u++) {
+				setOutput += "<a href=\"http://" +siteSets[i][u]+ "\" title=\"" +siteSets[i][u]+ "\" target=\"_blank\"><img src=\"http://g.etfv.co/http://" +siteSets[i][u]+ "\" alt=\"" +siteSets[i][u]+ "\" width=\"16\" height=\"16\"></a> ";
+			};
+			setOutput += "</li>";
+
+			document.getElementById("siteSets").innerHTML += setOutput;
+		};
+
+	</script><!-- Launchbot Organs -->
+
+</body>
+</html>

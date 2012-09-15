@@ -2,9 +2,9 @@
 
 ## Description
 
-Launchbot enables you to easily open Sets of all your favorite Websites with just one Click.
+Launchbot enables you to easily open sets of all your favorite websites with just one click.
 
-It's like restoring Tabs, but on any Computer and Browser. Additional you can use the build in Google Search Bar for a fresh start. Or just quick-launch a Website through the Favorite Bar at the Top.
+It's like restoring tabs, but on any computer and browser. You can also search Google or just quick-launch one of your favorite websites.
 
 * **Install Instruction:** http://launchbot.michaelxander.de/about.html
 * **Changelog:** http://launchbot.michaelxander.de/changelog.html
