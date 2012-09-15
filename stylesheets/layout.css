@@ -1,5 +1,6 @@
 /* #Site Styles
 ================================================== */
+h1 { white-space: nowrap;}
 img.middle { vertical-align: text-bottom;}
 
 input[type="text"],
@@ -60,7 +61,9 @@ select {
 	@media only screen and (min-width: 480px) and (max-width: 767px) {}
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-	@media only screen and (max-width: 479px) {}
+	@media only screen and (max-width: 479px) {
+		img.middle { display: block; margin: 0 auto;}
+	}
 
 
 /* #Font-Face
