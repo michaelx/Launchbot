@@ -21,6 +21,7 @@
 
 	<link rel="shortcut icon" href="images/favicon.gif">
 	<link rel="apple-touch-icon" href="images/images/favicon.gif">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 
 </head>
 <body OnLoad="document.searchForm.q.focus();">
@@ -66,9 +67,13 @@
 
 		/* Configuration */
 		// 1) Favorite Sites: enter your urls without 'http://'
-		var favSites = ["michaelxander.de", "google.com","mail.google.com", "docs.google.com", "twitter.com", "hootsuite.com", "pinterest.com", "dribbble.com", "apple.com", "facebook.com"];
+		var favSites = ["michaelxander.de", "google.com","mail.google.com", "docs.google.com", "twitter.com", "hootsuite.com", "pinterest.com", "dribbble.com", "apple.com", "facebook.com", "nytimes.com", "news.ycombinator.com", "onethingwell.org", "brettterpstra.com"];
 		// 2) Sets: enter your urls without 'http://'. First array element is the name of the set.
-		var siteSets = [ ["morning set", "nytimes.com", "spiegel.de", "macstories.net", "stadt-bremerhaven.de", "onethingwell.org"], ["NYC", "michaelxander.de/static/nyc-cams.html", "hellonewyork.us", "ileftmyheartinmanhattan.tumblr.com", "newyork-ny-130.tumblr.com", "candidnewyork.tumblr.com"] ];
+		var siteSets = [ ["morning set", "nytimes.com", "news.ycombinator.com", "macstories.net", "stadt-bremerhaven.de", "onethingwell.org"], ["NYC", "michaelxander.de/static/nyc-cams.html", "hellonewyork.us", "ileftmyheartinmanhattan.tumblr.com", "newyork-ny-130.tumblr.com", "candidnewyork.tumblr.com"] ];
+		// 3) Weather Forecast (optional): enter your zip code and country.
+		var zipCode = "10439";
+		var country = "Germany";
+		var unit = "c"; // c or f (for Celsius or Fahrenheit)
 		/* Configuration finished */
 
 
@@ -98,6 +103,21 @@
 
 			document.getElementById("siteSets").innerHTML += setOutput;
 		};
+
+		// Weather Forecast
+		if (zipCode != "" && country != "") {
+			var query = escape('SELECT woeid FROM geo.places WHERE text="' + zipCode + ' ' + country + '" LIMIT 1'), url = "http://query.yahooapis.com/v1/public/yql?q=" + query + "&format=json&callback=?";
+			
+			$.getJSON(url, function(data) {
+				var woeID = data.query.results.place.woeid;
+
+			    var query = escape('SELECT item.forecast,location FROM weather.forecast WHERE woeid="' + woeID + '" AND u="' + unit + '" LIMIT 1'), url = "http://query.yahooapis.com/v1/public/yql?q=" + query + "&format=json&callback=?";
+
+				$.getJSON(url, function(data) {
+		            $("#weather").append("By the way, the weather forecast for " + data.query.results.channel.location.city + " is " + data.query.results.channel.item.forecast.high + "&deg;<span class=\"uppercase\">" + unit + "</span> and it is going to be <span class=\"lowercase\">" + data.query.results.channel.item.forecast.text + "</span>.");
+		        });
+	        });
+	    }
 
 	</script><!-- Launchbot Organs -->
 

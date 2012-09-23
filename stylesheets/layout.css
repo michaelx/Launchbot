@@ -1,7 +1,7 @@
 /* #Site Styles
 ================================================== */
-h1 { white-space: nowrap;}
-img.middle { vertical-align: text-bottom;}
+h1 { white-space: nowrap; }
+img.middle { vertical-align: text-bottom; }
 
 input[type="text"],
 input[type="password"],
@@ -41,6 +41,9 @@ select {
 .footer a { color: #ccc; }
 .footer a:hover { color: #54aed4; }
 
+.lowercase { text-transform: lowercase; }
+.uppercase { text-transform: uppercase; }
+
 
 /* #Page Styles
 ================================================== */
@@ -62,7 +65,7 @@ select {
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {
-		img.middle { display: block; margin: 0 auto;}
+		img.middle { display: block; margin: 0 auto; }
 	}
 
 
