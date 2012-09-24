@@ -114,7 +114,7 @@
 			    var query = escape('SELECT item.forecast,location FROM weather.forecast WHERE woeid="' + woeID + '" AND u="' + unit + '" LIMIT 1'), url = "http://query.yahooapis.com/v1/public/yql?q=" + query + "&format=json&callback=?";
 
 				$.getJSON(url, function(data) {
-		            $("#weather").append("By the way, the weather forecast for " + data.query.results.channel.location.city + " is " + data.query.results.channel.item.forecast.high + "&deg;<span class=\"uppercase\">" + unit + "</span> and it is going to be <span class=\"lowercase\">" + data.query.results.channel.item.forecast.text + "</span>.");
+		            $("#weather").append("By the way, the weather forecast for " + data.query.results.channel.location.city + " is " + data.query.results.channel.item.forecast.high + "&deg;<span class=\"uppercase\">" + unit + "</span> and <span class=\"lowercase\">" + data.query.results.channel.item.forecast.text + "</span>.");
 		        });
 	        });
 	    }
