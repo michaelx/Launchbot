@@ -52,7 +52,7 @@
 			<p id="favoriteSites"></p>
 		</div>
 		<div class="sixteen columns">
-			<p class="footer">&copy; 2012 <a href="http://michaelxander.de" target="_blank">Michael Xander</a>.  
+			<p class="footer">&copy; 2013 <a href="http://michaelxander.de" target="_blank">Michael Xander</a>.
 			<a href="http://launchbot.michaelxander.de/about.html">Download and about Launchbot.</a>
 			Follow me on <a href="http://twitter.com/michael_xander" target="_blank">Twitter</a> for further projects.
 			</p>
@@ -67,7 +67,7 @@
 
 		/* Configuration */
 		// 1) Favorite Sites: enter your urls without 'http://'
-		var favSites = ["michaelxander.de", "google.com","mail.google.com", "docs.google.com", "twitter.com", "hootsuite.com", "pinterest.com", "dribbble.com", "apple.com", "facebook.com", "nytimes.com", "news.ycombinator.com", "onethingwell.org", "brettterpstra.com"];
+		var favSites = ["michaelxander.de", "google.com", "mail.google.com", "docs.google.com", "twitter.com", "hootsuite.com", "pinterest.com", "dribbble.com", "apple.com", "facebook.com", "nytimes.com", "news.ycombinator.com", "onethingwell.org", "brettterpstra.com", "davidslog.com", "instantwatcher.com", "hypetrak.com", "toucharcade.com", "aptgetupdate.de"];
 		// 2) Sets: enter your urls without 'http://'. First array element is the name of the set.
 		var siteSets = [ ["morning set", "nytimes.com", "news.ycombinator.com", "macstories.net", "stadt-bremerhaven.de", "onethingwell.org"], ["NYC", "michaelxander.de/static/nyc-cams.html", "hellonewyork.us", "ileftmyheartinmanhattan.tumblr.com", "newyork-ny-130.tumblr.com", "candidnewyork.tumblr.com"] ];
 		// 3) Weather Forecast (optional): enter your zip code and country.
@@ -85,15 +85,15 @@
 		};
 		document.getElementById("favoriteSites").innerHTML = favs;
 
-		
+
 		for (var i = 0; i < siteSets.length; i++) {
 
 			setOutput = "<li><a href=\"#\" onClick=\"";
-			
+
 			for (var u = 1; u < siteSets[i].length; u++) {
 				setOutput += "window.open('http://" +siteSets[i][u]+ "');";
 			};
-			
+
 			setOutput += "\">" +siteSets[i][0]+ "<\/a> <br>";
 
 			for (var u = 1; u < siteSets[i].length; u++) {
@@ -107,7 +107,7 @@
 		// Weather Forecast
 		if (zipCode != "" && country != "") {
 			var query = escape('SELECT woeid FROM geo.places WHERE text="' + zipCode + ' ' + country + '" LIMIT 1'), url = "http://query.yahooapis.com/v1/public/yql?q=" + query + "&format=json&callback=?";
-			
+
 			$.getJSON(url, function(data) {
 				var woeID = data.query.results.place.woeid;
 
