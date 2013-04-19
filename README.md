@@ -6,8 +6,8 @@ Launchbot enables you to easily open sets of all your favorite websites with jus
 
 It's like restoring tabs, but on any computer and browser. You can also search Google or just quick-launch one of your favorite websites.
 
-* **Install Instruction:** http://michaelxander.com/launchbot/about.html
-* **Changelog:** http://michaelxander.com/launchbot/changelog.html
+* **Install Instruction:** http://launchbot.michaelxander.com/about.html
+* **Changelog:** http://launchbot.michaelxander.com/changelog.html
 
 
 ## Author
