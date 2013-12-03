@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
 	<title>Launchbot &ndash; Your Personal Startpage Script</title>
 	<meta name="keywords" content="Launchbot, Startpage Script, Michael Xander, Dashboard, Open-Source, Morning Coffee">
-	<meta name="description" content="Launchbot enables you to easily open sets of all your favorite websites with one click. It's like restoring tabs, but on any computer and browser.">
+	<meta name="description" content="Launchbot enables you to easily open sets of all your favorite websites with one click. It's like restoring tabs, but on every device and browser.">
 	<meta name="author" content="Michael Xander">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="stylesheets/base.css">
@@ -34,7 +34,7 @@
 		<div class="one-third column">
 			<h3>Search The Web</h3>
 			<p>My oil is fresh, we could search something!</p>
-			<form method="get" action="http://www.google.com/search" id="searchForm" name="searchForm">
+			<form method="get" action="" id="searchForm" name="searchForm">
 				<fieldset>
 					<input type="text" name="q" maxlength="255" id="searchText" value="" />
 					<input type="submit" id="searchSubmit" value="GO" />
@@ -77,6 +77,8 @@
 		var unit = "c"; // c or f (for Celsius or Fahrenheit)
 		// 4) Search Field Focus (optional): uncomment to actiave (can be annoying if you immediately want to open an url)
 		//document.searchForm.q.focus();
+		// 5) Change Search Engine (optional): edit to search for example with DuckDuckGo (https://duckduckgo.com) instead of Google (https://www.google.com/search).
+		var searchEngine = "https://www.google.com/search";
 		/* Configuration finished */
 
 
@@ -114,14 +116,16 @@
 
 			$.getJSON(url, function(data) {
 				var woeID = data.query.results.place.woeid;
-
-			    var query = escape('SELECT item.forecast,location FROM weather.forecast WHERE woeid="' + woeID + '" AND u="' + unit + '" LIMIT 1'), url = "http://query.yahooapis.com/v1/public/yql?q=" + query + "&format=json&callback=?";
+				var query = escape('SELECT item.forecast,location FROM weather.forecast WHERE woeid="' + woeID + '" AND u="' + unit + '" LIMIT 1'), url = "http://query.yahooapis.com/v1/public/yql?q=" + query + "&format=json&callback=?";
 
 				$.getJSON(url, function(data) {
-		            $("#weather").append("By the way, the weather forecast for " + data.query.results.channel.location.city + " is " + data.query.results.channel.item.forecast.high + "&deg;<span class=\"uppercase\">" + unit + "</span> and <span class=\"lowercase\">" + data.query.results.channel.item.forecast.text + "</span>.");
-		        });
-	        });
-	    }
+		      $("#weather").append("By the way, the weather forecast for " + data.query.results.channel.location.city + " is " + data.query.results.channel.item.forecast.high + "&deg;<span class=\"uppercase\">" + unit + "</span> and <span class=\"lowercase\">" + data.query.results.channel.item.forecast.text + "</span>.");
+		    });
+	    });
+	  }
+
+		// Search Engine
+		document.searchForm.action = searchEngine;
 
 	</script><!-- Launchbot Organs -->
 
