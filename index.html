@@ -68,22 +68,21 @@
 
 		/* Configuration */
 		// 1) Favorite Sites: enter your urls without 'http://'
-		var favSites = ["forum.xda-developers.com", "newsblur.com", "mail.google.com", "drive.google.com", "twitter.com", "box.com", "dropbox.com", "plus.google.com", "play.google.com", "youtube.com" ];
+		var favSites = ["michaelxander.com", "mymorningroutine.com", "mail.google.com", "drive.google.com", "twitter.com", "hootsuite.com", "nytimes.com", "news.ycombinator.com", "onethingwell.org", "brettterpstra.com", "instantwatcher.com", "hypetrak.com", "toucharcade.com"];
 		// 2) Sets: enter your urls without 'http://'. First array element is the name of the set.
-		var siteSets = [ ["ROMS", "forum.xda-developers.com/showthread.php?t=2511512", "en.miui.com/thread-10420-1-1.html"], ["BASE", "newsblur.com", "mail.google.com","plus.google.com"]  ];
-		// 3) Weather Forecast (optional): enter your zip code and country.
-		var zipCode = "E1C8Y1";
-		var country = "Canada";
+		var siteSets = [ ["evening set", "nytimes.com", "news.ycombinator.com", "onethingwell.org", "macstories.net", "stadt-bremerhaven.de", "brettterpstra.com", "instantwatcher.com", "hypetrak.com"], ["NYC", "michaelxander.com/static/nyc-cams.html", "hellonewyork.us", "newyork-ny-130.tumblr.com", "candidnewyork.tumblr.com", "uppereasttside.tumblr.com"], ["Travel", "skyscanner.de", "kayak.com", "en.wikivoyage.org", "wikitravel.org"] ];
+
+		/* OPTIONAL settings */
+		// 3) Weather Forecast: enter your zip code and country.
+		var zipCode = 10439;
+		var country = "Germany";
 		var unit = "c"; // c or f (for Celsius or Fahrenheit)
-				// 4) Search Field Focus: uncomment to actiave (can be annoying if you immediately want to open an url)
+		// 4) Search Field Focus: uncomment to actiave (can be annoying if you immediately want to open an url)
 		//document.searchForm.q.focus();
 		// 5) Change Search Engine: edit to search for example with DuckDuckGo (https://duckduckgo.com) instead of Google (https://www.google.com/search).
 		var searchEngine = "https://www.google.com/search";
 		// 6) Favicon size: edit to change the favicon size (default = 16)
 		var faviconSize = 16;
-		
-		// 7) Set Target for single site open(New tab or current tab blank or self)
-		var openin = "_blank"
 		/* Configuration finished */
 
 
@@ -91,7 +90,7 @@
 		var setOutput;
 
 		for (var i in favSites) {
-			favs += "<a href=\"http://" +favSites[i]+ "\" title=\"" +favSites[i]+ "\" target="+openin+"><img src=\"http://g.etfv.co/http://" +favSites[i]+ "\" alt=\"" +favSites[i]+ "\" width=\"" +faviconSize+ "\" height=\"" +faviconSize+ "\"></a> ";
+			favs += "<a href=\"http://" +favSites[i]+ "\" title=\"" +favSites[i]+ "\" target=\"_blank\"><img src=\"http://g.etfv.co/http://" +favSites[i]+ "\" alt=\"" +favSites[i]+ "\" width=\"" +faviconSize+ "\" height=\"" +faviconSize+ "\"></a> ";
 		};
 		document.getElementById("favoriteSites").innerHTML = favs;
 
@@ -107,7 +106,7 @@
 			setOutput += "\">" +siteSets[i][0]+ "<\/a> <br>";
 
 			for (var u = 1; u < siteSets[i].length; u++) {
-				setOutput += "<a href=\"http://" +siteSets[i][u]+ "\" title=\"" +siteSets[i][u]+ "\" target="+openin+"><img src=\"http://g.etfv.co/http://" +siteSets[i][u]+ "\" alt=\"" +siteSets[i][u]+ "\" width=\"" +faviconSize+ "\" height=\"" +faviconSize+ "\"></a> ";
+				setOutput += "<a href=\"http://" +siteSets[i][u]+ "\" title=\"" +siteSets[i][u]+ "\" target=\"_blank\"><img src=\"http://g.etfv.co/http://" +siteSets[i][u]+ "\" alt=\"" +siteSets[i][u]+ "\" width=\"" +faviconSize+ "\" height=\"" +faviconSize+ "\"></a> ";
 			};
 			setOutput += "</li>";
 
