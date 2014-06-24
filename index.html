@@ -53,7 +53,7 @@
 			<p id="weather"></p>
 		</div>
 		<div class="sixteen columns">
-			<p class="footer">&copy; 2013 <a href="http://michaelxander.com" target="_blank">Michael Xander</a>.
+			<p class="footer">&copy; 2014 <a href="http://michaelxander.com" target="_blank">Michael Xander</a>.
 			<a href="http://launchbot.michaelxander.com/about.html">Download and about Launchbot.</a>
 			Follow me on <a href="http://twitter.com/michael_xander" target="_blank">Twitter</a> for further projects.
 			</p>
@@ -67,10 +67,10 @@
 	<script type="text/javascript">
 
 		/* Configuration */
-		// 1) Favorite Sites: enter your urls without 'http://'
-		var favSites = ["michaelxander.com", "mymorningroutine.com", "mail.google.com", "drive.google.com", "twitter.com", "hootsuite.com", "nytimes.com", "news.ycombinator.com", "onethingwell.org", "brettterpstra.com", "instantwatcher.com", "hypetrak.com", "toucharcade.com"];
-		// 2) Sets: enter your urls without 'http://'. First array element is the name of the set.
-		var siteSets = [ ["evening set", "nytimes.com", "news.ycombinator.com", "onethingwell.org", "macstories.net", "stadt-bremerhaven.de", "brettterpstra.com", "instantwatcher.com", "hypetrak.com"], ["NYC", "michaelxander.com/static/nyc-cams.html", "hellonewyork.us", "newyork-ny-130.tumblr.com", "candidnewyork.tumblr.com", "uppereasttside.tumblr.com"], ["Travel", "skyscanner.de", "kayak.com", "en.wikivoyage.org", "wikitravel.org"] ];
+		// 1) Favorite Sites: enter your urls with the protocol 'http://', 'https://', 'ftp://' …
+		var favSites = ["http://michaelxander.com", "http://mymorningroutine.com", "http://hikewith.me", "https://mail.google.com", "https://drive.google.com", "https://twitter.com", "https://hootsuite.com", "http://nytimes.com", "https://news.ycombinator.com", "http://onethingwell.org", "http://brettterpstra.com", "http://instantwatcher.com", "http://hypetrak.com", "http://toucharcade.com"];
+		// 2) Sets: enter your urls with the protocol, as above. First array element works as the name of the set.
+		var siteSets = [ ["Daily", "http://nytimes.com", "https://news.ycombinator.com", "http://reddit.com", "https://news.layervault.com", "http://onethingwell.org", "http://macstories.net", "http://stadt-bremerhaven.de", "http://brettterpstra.com", "http://hypetrak.com"], ["Travel", "http://michaelxander.com/static/nyc-cams.html", "http://hellonewyork.us", "http://skyscanner.de", "http://kayak.com", "http://en.wikivoyage.org", "http://wikitravel.org"] ];
 
 		/* OPTIONAL settings */
 		// 3) Weather Forecast: enter your zip code and country.
@@ -90,7 +90,7 @@
 		var setOutput;
 
 		for (var i in favSites) {
-			favs += "<a href=\"http://" +favSites[i]+ "\" title=\"" +favSites[i]+ "\" target=\"_blank\"><img src=\"http://g.etfv.co/http://" +favSites[i]+ "\" alt=\"" +favSites[i]+ "\" width=\"" +faviconSize+ "\" height=\"" +faviconSize+ "\"></a> ";
+			favs += "<a href=\"" +favSites[i]+ "\" title=\"" +favSites[i]+ "\" target=\"_blank\"><img src=\"http://g.etfv.co/" +favSites[i]+ "\" alt=\"" +favSites[i]+ "\" width=\"" +faviconSize+ "\" height=\"" +faviconSize+ "\"></a> ";
 		};
 		document.getElementById("favoriteSites").innerHTML = favs;
 
@@ -100,13 +100,13 @@
 			setOutput = "<li><a href=\"#\" onClick=\"";
 
 			for (var u = 1; u < siteSets[i].length; u++) {
-				setOutput += "window.open('http://" +siteSets[i][u]+ "');";
+				setOutput += "window.open('" +siteSets[i][u]+ "');";
 			};
 
 			setOutput += "\">" +siteSets[i][0]+ "<\/a> <br>";
 
 			for (var u = 1; u < siteSets[i].length; u++) {
-				setOutput += "<a href=\"http://" +siteSets[i][u]+ "\" title=\"" +siteSets[i][u]+ "\" target=\"_blank\"><img src=\"http://g.etfv.co/http://" +siteSets[i][u]+ "\" alt=\"" +siteSets[i][u]+ "\" width=\"" +faviconSize+ "\" height=\"" +faviconSize+ "\"></a> ";
+				setOutput += "<a href=\"" +siteSets[i][u]+ "\" title=\"" +siteSets[i][u]+ "\" target=\"_blank\"><img src=\"http://g.etfv.co/" +siteSets[i][u]+ "\" alt=\"" +siteSets[i][u]+ "\" width=\"" +faviconSize+ "\" height=\"" +faviconSize+ "\"></a> ";
 			};
 			setOutput += "</li>";
 
