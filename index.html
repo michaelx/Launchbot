@@ -90,7 +90,7 @@
 		var setOutput;
 
 		for (var i in favSites) {
-			favs += "<a href=\"" +favSites[i]+ "\" title=\"" +favSites[i]+ "\" target=\"_blank\"><img src=\"http://g.etfv.co/" +favSites[i]+ "\" alt=\"" +favSites[i]+ "\" width=\"" +faviconSize+ "\" height=\"" +faviconSize+ "\"></a> ";
+			favs += "<a href=\"" +favSites[i]+ "\" title=\"" +favSites[i]+ "\" target=\"_blank\"><img src=\"http://www.google.com/s2/favicons?domain=" +favSites[i]+ "\" alt=\"" +favSites[i]+ "\" width=\"" +faviconSize+ "\" height=\"" +faviconSize+ "\"></a> ";
 		};
 		document.getElementById("favoriteSites").innerHTML = favs;
 
@@ -106,7 +106,7 @@
 			setOutput += "\">" +siteSets[i][0]+ "<\/a> <br>";
 
 			for (var u = 1; u < siteSets[i].length; u++) {
-				setOutput += "<a href=\"" +siteSets[i][u]+ "\" title=\"" +siteSets[i][u]+ "\" target=\"_blank\"><img src=\"http://g.etfv.co/" +siteSets[i][u]+ "\" alt=\"" +siteSets[i][u]+ "\" width=\"" +faviconSize+ "\" height=\"" +faviconSize+ "\"></a> ";
+				setOutput += "<a href=\"" +siteSets[i][u]+ "\" title=\"" +siteSets[i][u]+ "\" target=\"_blank\"><img src=\"http://www.google.com/s2/favicons?domain=" +siteSets[i][u]+ "\" alt=\"" +siteSets[i][u]+ "\" width=\"" +faviconSize+ "\" height=\"" +faviconSize+ "\"></a> ";
 			};
 			setOutput += "</li>";
 
