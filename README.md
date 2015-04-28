@@ -19,7 +19,7 @@ It's like restoring tabs, but on every device and browser. You can also search t
 ### What's next?
 
 * Keyboard shortcuts to open sets
-* … send in feature requests via [Twitter](http://twitter.com/michael_xander)
+* … send in feature requests via [Twitter](http://twitter.com/michaxndr)
 
 ## Compatibility
 
@@ -34,6 +34,6 @@ In some configurations Chrome will open a set in windows instead of tabs. To avo
 Launchbot was built by Michael Xander.
 
 * http://michaelxander.com
-* http://twitter.com/michael_xander
+* http://twitter.com/michaxndr
 
 
