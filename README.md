@@ -6,6 +6,8 @@ Launchbot enables you to easily open sets of all your favorite websites with jus
 
 It's like restoring tabs, but on every device and browser. You can also search the web or just quick-launch one of your favorite websites.
 
+> Note: I started working on v3, which comes with an easier config. The instruction below is for the v2 release. If you check out the current code base you can configure Launchbot completely in config.js. Next-up new UI!
+
 * **Install Instruction:** http://launchbot.michaelxander.com/about.html
 * **Changelog:** http://launchbot.michaelxander.com/changelog.html
 
@@ -18,7 +20,12 @@ It's like restoring tabs, but on every device and browser. You can also search t
 
 ### What's next?
 
-* Keyboard shortcuts to open sets
+* ✅ Remove configuration from core, into config file
+* ✅ Streamline JavaScript functions
+* ✅ Add structure for plugin support
+* ✅ Remove jQuery dependency
+* ◽ New UI
+* ◽ Keyboard shortcuts to open sets
 * … send in feature requests via [Twitter](http://twitter.com/michaxndr)
 
 ## Compatibility
