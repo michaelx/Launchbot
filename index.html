@@ -57,12 +57,15 @@
       </p>
     </div>
   </div>
+
   <!-- Launchbot Organs -->
   <script type="text/javascript">
   var lb = launchbotConfig;
 
-  // Fetch all links of a set or fav object and create a result object
-  // with all links, the onClick event, and name of the set.
+  /**
+   * Fetch all items of a set or fav object.
+   * Return as res object with all styled links, onClick event, and set name.
+   */
   function getLinks(obj, setName) {
     var setName = setName || 'favs';
     var item = obj;
@@ -83,8 +86,10 @@
     return res;
   }
 
-  // Fetch all sets, and add the result object from getLinks to an array,
-  // so that all sets are in one array with all necessary links.
+  /**
+   * Fetch all sets and add the result object from getLinks to an array,
+   * so that all sets are in one array with all styled links.
+   */
   function getSets() {
     var sets = lb.sets;
     var res = [];
@@ -93,19 +98,19 @@
     for (var i in sets) {
       var result = getLinks(sets[i].items, sets[i].name);
       res.push(result);
-      // Clear vars for the next set.
+      // Clear values for the next set
       allItems = '';
       setOnClick = '';
     }
     return res;
   }
 
-  // Link style with favicon.
+  // Link style with favicon
   function outputLinks(item) {
     return '<a href=\"' + item + '\" title=\"' + item + '\" target=\"' + lb.options.linkTarget + '\"><img src=\"' + lb.options.faviconService + item + '\" width=\"' + lb.options.faviconSize + '\" height=\"' + lb.options.faviconSize + '\"><\/a> ';
   }
 
-  // Display and style sets.
+  // Output style of each set list
   function createSetList() {
     var sets = getSets();
     var outputSets = '';
@@ -133,7 +138,7 @@
       var weatherUnit = 'f';
     }
 
-    // Display weather data.
+    // Display weather data
     var weatherCallback = function(data) {
       var weatherLoc = data.query.results.channel.location.city;
       var weatherHigh = data.query.results.channel.item.forecast.high;
@@ -142,7 +147,7 @@
       document.getElementById("weather").innerHTML = 'By the way, the weather forecast for ' + weatherLoc + ' is ' + weatherHigh + '&deg;<span class=\"uppercase\">' + weatherUnit + '<\/span> and <span class=\"lowercase\">' + weatherDesc + '<\/span>.';
     };
 
-    // Weather API call.
+    // Weather API call
     var query = 'https://query.yahooapis.com/v1/public/yql?q=SELECT item.forecast,location FROM weather.forecast WHERE woeid in (SELECT woeid FROM geo.places(1) WHERE text="' + weather.zipCode + ', ' + weather.country + '") AND u="' + weatherUnit + '" LIMIT 1&format=json&callback=weatherCallback';
     var encodedQuery = encodeURI(query);
     document.write('<script src=' + encodedQuery + '><\/script>');
@@ -151,6 +156,7 @@
   // Plugins END
   </script>
   <!-- Launchbot Organs -->
+
 </body>
 
 </html>

@@ -56,7 +56,7 @@ var launchbotConfig = {
     searchEngine: 'https://www.google.com/search',
     faviconSize: 16,
     faviconService: 'http://www.google.com/s2/favicons?domain=',
-    linkTarget: "_blank"
+    linkTarget: '_blank'
   },
   plugins: {
     weather: {
