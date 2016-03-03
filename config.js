@@ -9,6 +9,7 @@ var launchbotConfig = {
       items: [
         'http://mymorningroutine.com',
         'http://nytimes.com',
+        'http://www.newyorker.com',
         'https://news.ycombinator.com',
         'http://reddit.com',
         'http://onethingwell.org',
@@ -47,8 +48,7 @@ var launchbotConfig = {
     'http://nytimes.com',
     'https://news.ycombinator.com',
     'http://onethingwell.org',
-    'http://brettterpstra.com',
-    'http://instantwatcher.com'
+    'http://brettterpstra.com'
   ],
 
   // Optional settings
