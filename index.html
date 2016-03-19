@@ -39,6 +39,15 @@
           <input type="submit" id="searchSubmit" value="GO" />
         </fieldset>
       </form>
+      <hr>
+      <h3>Search Wikipedia</h3>
+      <p>My electrons are ready, let's learn something new!</p>
+      <form method="get" action="" id="searchWikiForm" name="searchWikiForm" target="_blank">
+        <fieldset>
+          <input type="text" name="search" maxlength="255" id="searchWiki" value="" />
+          <input type="submit" id="searchWikiSubmit" value="GO" />
+        </fieldset>
+      </form>
     </div>
     <div class="one-third column">
       <h3>Open Sets</h3>
@@ -124,7 +133,7 @@
   document.getElementById("siteSets").innerHTML = createSetList();
   document.getElementById("favoriteSites").innerHTML = getLinks(lb.favs).aList;
   if (lb.options.searchEngine !== 'https://www.google.com/search') document.searchForm.action = lb.options.searchEngine;
-
+  document.searchWikiForm.action = 'https://en.wikipedia.org/w/index.php';
 
   // Plugins
   // -------
