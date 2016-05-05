@@ -132,7 +132,8 @@
   // DOM manipulations
   document.getElementById("siteSets").innerHTML = createSetList();
   document.getElementById("favoriteSites").innerHTML = getLinks(lb.favs).aList;
-  if (lb.options.searchEngine !== 'https://www.google.com/search') document.searchForm.action = lb.options.searchEngine;
+  //if (lb.options.searchEngine !== 'https://www.google.com/search') 
+  document.searchForm.action = lb.options.searchEngine;
   document.searchWikiForm.action = 'https://en.wikipedia.org/w/index.php';
 
   // Plugins
