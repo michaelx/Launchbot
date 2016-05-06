@@ -1,6 +1,11 @@
 /* #Site Styles
 ================================================== */
-h1 { white-space: nowrap; }
+h1 {
+	font-size: 42px;
+	line-height: 48px;
+	white-space: nowrap;
+}
+
 img.middle { vertical-align: text-bottom; }
 
 input[type="text"],

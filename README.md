@@ -4,7 +4,7 @@
 
 Launchbot enables you to easily open sets of all your favorite websites with just one click.
 
-It's like restoring tabs, but on every device and browser. You can also search the web or just quick-launch one of your favorite websites.
+It’s like restoring tabs, but on every device and browser. You can also search the web or just quick-launch one of your favorite websites.
 
 > Note: I started working on v3, which comes with an easier config. The instruction below is for the v2 release. If you check out the current code base you can configure Launchbot completely in config.js. Next-up new UI!
 
@@ -18,23 +18,26 @@ It's like restoring tabs, but on every device and browser. You can also search t
 * Search the web with your preferred search engine
 * See the weather forecast for today
 
-### What's next?
+### What’s next?
 
 * ✅ Remove configuration from core, into config file
 * ✅ Streamline JavaScript functions
 * ✅ Add structure for plugin support
 * ✅ Remove jQuery dependency
 * ◽ New UI
+* ◽ UI for all configurations
 * ◽ Keyboard shortcuts to open sets
-* … send in feature requests via [Twitter](http://twitter.com/michaxndr)
+* ◽ Theme support
+
+Ideas or requests? Hit me up on [Twitter](http://twitter.com/michaxndr).
 
 ## Compatibility
 
-Launchbot should work with every major browser on every device, as long Javascript is enabled.
+Launchbot should work with every major browser on every device, as long JavaScript is enabled.
 
 ### Chrome
 
-In some configurations Chrome will open a set in windows instead of tabs. To avoid this behaviour you can hold down cmd (Mac); ctrl (Win).
+In some configurations Chrome will open a set in windows instead of tabs. Hold down cmd (Mac)/ctrl (Win) to avoid that behaviour.
 
 ## Author
 
