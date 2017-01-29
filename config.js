@@ -12,11 +12,9 @@ var launchbotConfig = {
         'http://www.newyorker.com',
         'https://news.ycombinator.com',
         'http://reddit.com',
-        'http://onethingwell.org',
         'http://macstories.net',
         'http://stadt-bremerhaven.de',
-        'http://brettterpstra.com',
-        'http://hypetrak.com'
+        'http://brettterpstra.com'
       ]
     },
 
@@ -25,8 +23,7 @@ var launchbotConfig = {
       name: 'Travel',
       items: [
         'http://michaelxander.com/static/nyc-cams.html',
-        'http://skyscanner.de',
-        'http://kayak.com',
+        'https://www.google.com/flights/',
         'http://en.wikivoyage.org',
         'http://wikitravel.org'
       ]
@@ -47,8 +44,7 @@ var launchbotConfig = {
     'https://hootsuite.com',
     'http://nytimes.com',
     'https://news.ycombinator.com',
-    'http://onethingwell.org',
-    'http://brettterpstra.com'
+    'http://devdocs.io'
   ],
 
   // Optional settings
