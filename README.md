@@ -31,7 +31,7 @@ It’s like restoring tabs, but on every device and browser. You can also search
 * ◽ Keyboard shortcuts to open sets
 * ◽ Theme support
 
-Ideas or requests? Hit me up on [Twitter](http://twitter.com/michaxndr).
+Ideas or requests? Hit me up on [Twitter](https://twitter.com/michaxndr).
 
 ## Compatibility
 
@@ -45,7 +45,7 @@ In some configurations Chrome will open a set in windows instead of tabs. Hold d
 
 Launchbot was built by Michael Xander.
 
-* http://michaelxander.com
-* http://twitter.com/michaxndr
+* https://michaelxander.com
+* https://twitter.com/michaxndr
 
 
