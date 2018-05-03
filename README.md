@@ -39,7 +39,13 @@ Launchbot should work with every major browser on every device, as long JavaScri
 
 ### Chrome
 
-In some configurations Chrome will open a set in windows instead of tabs. Hold down cmd (Mac)/ctrl (Win) to avoid that behaviour.
+In some configurations Chrome will open a set in windows instead of tabs. Hold down cmd (Mac) or ctrl (Windows) to avoid that behavior.
+
+### Safari
+
+Since Safari 11 you need to disable "Security > Block pop-up windows", as only one new tab is allowed—no matter what [fancy](https://stackoverflow.com/a/46439467) delay solution you built.
+
+![Safari Settings](https://i.imgur.com/gJ8La8Z.png)
 
 ## Author
 
@@ -47,5 +53,3 @@ Launchbot was built by Michael Xander.
 
 * https://michaelxander.com
 * https://twitter.com/michaxndr
-
-
