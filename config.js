@@ -7,13 +7,12 @@ var launchbotConfig = {
     {
       name: 'Daily',
       items: [
-        'http://mymorningroutine.com',
-        'http://nytimes.com',
-        'http://www.newyorker.com',
+        'https://mymorningroutine.com',
+        'https://www.nytimes.com',
+        'https://www.newyorker.com',
         'https://news.ycombinator.com',
-        'http://reddit.com',
-        'http://macstories.net',
-        'http://stadt-bremerhaven.de',
+        'https://reddit.com',
+        'https://macstories.net',
         'http://brettterpstra.com'
       ]
     },
@@ -22,7 +21,7 @@ var launchbotConfig = {
     {
       name: 'Travel',
       items: [
-        'http://michaelxander.com/static/nyc-cams.html',
+        'https://michaelxander.com/static/nyc-cams.html',
         'https://www.google.com/flights/',
         'http://en.wikivoyage.org',
         'http://wikitravel.org'
@@ -35,16 +34,16 @@ var launchbotConfig = {
 
   // For favorites bar, enter absolute URIs 'http://', 'https://', 'ftp://' …
   favs: [
-    'http://michaelxander.com',
-    'http://mymorningroutine.com',
+    'https://michaelxander.com',
+    'https://mymorningroutine.com',
     'https://mail.google.com',
     'https://drive.google.com',
     'https://app.asana.com',
     'https://twitter.com',
-    'https://hootsuite.com',
-    'http://nytimes.com',
+    'https://reddit.com',
+    'https://www.nytimes.com',
     'https://news.ycombinator.com',
-    'http://devdocs.io'
+    'https://devdocs.io'
   ],
 
   // Optional settings
