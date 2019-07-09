@@ -1,0 +1,42 @@
+/* Base styles */
+
+
+html,
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+body {
+  font-family: $base-font;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: var(--color-text);
+
+  background-color: var(--color-background);
+}
+
+
+/* Links */
+a { text-decoration: none; }
+
+
+/* Lists */
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+
+/* Horizontal line */
+hr {
+  width: 100%;
+  height: .25em;
+  margin: 2.5em 0 2em;
+
+  border: 0;
+  background-color: var(--color-set-border);
+}

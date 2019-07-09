@@ -1,0 +1,12 @@
+/* Site styles */
+
+
+/**
+ * Site wrapper
+ *
+ * Controls site width.
+ */
+.site-wrapper {
+  @include container($container-max, +, 0);
+  @include centered;
+}

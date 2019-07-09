@@ -1,0 +1,71 @@
+/* Button styles */
+
+
+/* Default button styles */
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding: .75rem 1.5rem;
+  box-sizing: border-box;
+
+  font-size: $font-size-small;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-button-text);
+
+  border: 2px solid;
+  border-radius: $border-radius;
+  border-color: var(--color-button-border);
+  background-color: var(--color-button-background);
+
+  cursor: pointer;
+  user-select: none;
+  appearance: none; /* Corrects inability to style clickable `input` types in iOS. */
+
+  &:focus { outline: none; }
+
+  &:hover,
+  &.is-active {
+    color: var(--color-button-text--hover);
+    border-color: var(--color-button-border--hover);
+    background-color: var(--color-button-background--hover);
+  }
+}
+
+
+/* Modifier for small buttons */
+.button--small { padding: .25rem .5rem; }
+
+
+/* Modifier for buttons in the navigation */
+.button--nav {
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  font-size: $base-font-size;
+  color: var(--color-button-text--nav);
+  border-color: var(--color-button-border--nav);
+  background-color: var(--color-button-background--nav);
+
+  @media only screen and (min-width: $screen-l) {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    font-size: $font-size-small;
+  }
+}
+
+
+/**
+ * Button set
+ *
+ * A list containing multiple buttons.
+ */
+.button-set { list-style: none; }
+
+.button-set__item {
+  display: inline-block;
+  padding-right: .75rem;
+  padding-bottom: .75rem;
+}

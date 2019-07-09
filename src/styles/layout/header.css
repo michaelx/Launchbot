@@ -1,0 +1,26 @@
+/* Header styles */
+
+
+/**
+ * Header container
+ *
+ * Contains nav (search and nav-list). Margin to content.
+ */
+.header {
+  width: 100%;
+  margin-bottom: $spacing-header-s;
+  padding: 1em 1em 0;
+
+  @media only screen and (min-width: $screen-l) {
+    margin-bottom: $spacing-header-l;
+    padding: 2em 2em 0;
+  }
+
+  @media only screen and (min-width: $screen-xl) {
+    margin-bottom: $spacing-header-xl;
+  }
+
+  @media only screen and (min-width: $screen-xxl) {
+    margin-bottom: $spacing-header-xxl;
+  }
+}

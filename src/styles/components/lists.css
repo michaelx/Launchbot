@@ -1,0 +1,14 @@
+/* List styles */
+
+
+/* Default list style for content text */
+.list {
+  margin-bottom: 1.5em;
+  padding-left: 2.5em;
+
+  li > p,
+  li {
+    margin-bottom: .75em;
+    &:last-child { margin-bottom: 0; }
+  }
+}

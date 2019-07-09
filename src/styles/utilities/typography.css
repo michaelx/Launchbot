@@ -1,0 +1,14 @@
+/* stylelint-disable declaration-no-important */
+
+
+/* Typography utilities */
+
+
+/* Text alignments */
+.u-text-center { text-align: center !important; }
+
+/* Text font weights */
+.u-text-bold { font-weight: $font-weight-bold !important; }
+
+
+/* stylelint-enable */

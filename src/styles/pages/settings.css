@@ -1,0 +1,49 @@
+/* Settings styles */
+
+
+/* Settings page */
+.settings {
+  display: none;
+  width: 100%;
+  padding: 1em;
+
+  background-color: var(--color-settings-background);
+
+  &.is-active { display: block; }
+
+  @media only screen and (min-width: $screen-l) {
+    padding: 2em;
+  }
+}
+
+
+/* Settings spacing */
+.settings__intro,
+.settings__export,
+.settings-form,
+.settings-form__group {
+  margin-bottom: 2em;
+}
+
+.settings-form-list {
+  margin-bottom: 1em;
+  list-style: none;
+}
+
+/* Modifier for plugins */
+.settings-form-list--plugin { margin-bottom: 2em; }
+
+
+/* Key/value pairs */
+.settings-form-list__item {
+  margin-bottom: 1em;
+  &:last-child { margin-bottom: 0; }
+}
+
+/* Modifier for plugin items */
+.settings-form-list__item--plugin {
+  &:first-child {
+    font-weight: $font-weight-bold;
+    color: var(--color-button-text--hover);
+  }
+}

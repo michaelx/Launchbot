@@ -1,0 +1,65 @@
+/**
+ * Resets
+ *
+ * CSS resets relevant to Launchbot.
+ */
+
+
+html { text-size-adjust: none; }
+
+
+body { margin: 0; }
+
+
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+
+html,
+body,
+div,
+article,
+section,
+main,
+footer,
+header,
+form,
+p,
+ul,
+ol,
+li,
+textarea,
+input[type="text"],
+input[type="search"] {
+  box-sizing: border-box;
+}
+
+
+a {
+  background-color: transparent;
+  text-decoration-skip: objects;
+
+  &:active,
+  &:hover {
+    outline-width: 0;
+  }
+}
+
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+
+button,
+input,
+textarea {
+  margin: 0;
+  font: inherit;
+}

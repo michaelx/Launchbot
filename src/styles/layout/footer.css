@@ -1,0 +1,17 @@
+/* Footer styles */
+
+
+/**
+ * Footer container
+ *
+ * On larger screens the footer becomes sticky.
+ */
+.footer {
+  width: 100%;
+
+  @media only screen and (min-width: $screen-l) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+}

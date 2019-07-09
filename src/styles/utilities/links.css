@@ -1,0 +1,20 @@
+/**
+ * Link styles
+ *
+ * Can be mixed in by components for design consistency.
+ * Not prefixed with u-.
+ */
+
+
+/* Default link style */
+@mixin link {
+  color: inherit;
+  border-bottom: 1px solid var(--color-button-text);
+
+  &:hover {
+    color: var(--color-button-text--hover);
+    border-color: var(--color-button-border--hover);
+  }
+}
+
+.link { @include link; }

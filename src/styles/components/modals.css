@@ -1,0 +1,42 @@
+/* Modal styles */
+
+
+/* Modal-container */
+.modal {
+  display: none; /* Visibility is controlled by JavaScript */
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0,0,0,.64);
+}
+
+
+/* Modal content element */
+.modal__content {
+  padding: 1rem;
+
+  font-size: $font-size-small;
+  color: var(--color-text);
+
+  border: 2px solid var(--color-set-border);
+  border-radius: $border-radius;
+  background-color: var(--color-set-background);
+
+  @include centered;
+  @include container($container-text, +, 0);
+
+  @media only screen and (min-width: $screen-m) {
+    padding: 2rem;
+    @include container($container-text, +, 4rem);
+  }
+
+  @media only screen and (min-width: $screen-l) {
+    margin-top: 6rem;
+  }
+}

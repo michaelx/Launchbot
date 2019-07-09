@@ -1,0 +1,120 @@
+/**
+ * Themes
+ *
+ * Colors are defined in variables.css. Below is setting up the CSS
+ * variables.
+ */
+
+
+/**
+ * Default theme (dark)
+ *
+ * CSS variables.
+ */
+@mixin theme-default {
+  --color-text: $color-text;
+  --color-heading: $color-heading;
+  --color-background: $color-background;
+
+  --color-set-name: $color-set-name;
+  --color-set-id: $color-set-id;
+  --color-set-background: $color-set-background;
+  --color-set-border: $color-set-border;
+  --color-set-border--hover: $color-set-border--hover;
+  --color-set-item: $color-set-item;
+  --color-set-item--hover: $color-set-item--hover;
+
+  --color-button-text: $color-button-text;
+  --color-button-text--hover: $color-button-text--hover;
+  --color-button-background: $color-button-background;
+  --color-button-background--hover: $color-button-background--hover;
+  --color-button-border: $color-button-border;
+  --color-button-border--hover: $color-button-border--hover;
+
+  --color-button-text--nav: $color-button-text--nav;
+  --color-button-background--nav: $color-button-background--nav;
+  --color-button-border--nav: $color-button-border--nav;
+
+  --color-search-text-placeholder: $color-search-text-placeholder;
+  --color-search-background: $color-search-background;
+
+  --color-settings-background: $color-settings-background;
+  --color-input-text: $color-input-text;
+  --color-input-text-placeholder: $color-input-text-placeholder;
+  --color-input-background: $color-input-background;
+  --color-input-border: $color-input-border;
+  --color-input-border--focus: $color-input-border--focus;
+
+  --color-plugin-text: $color-plugin-text;
+  --color-plugin-row-odd: $color-plugin-row-odd;
+  --color-plugin-row-even: $color-plugin-row-even;
+}
+
+:root { @include theme-default; }
+
+
+/**
+ * Light theme
+ *
+ * CSS variables mixin, so that it can be applied through JS.
+ *
+ * @TODO: Implement generator function (theme postfix).
+ */
+@mixin theme-light {
+  --color-text: $color-lt-text;
+  --color-heading: $color-lt-heading;
+  --color-background: $color-lt-background;
+
+  --color-set-name: $color-lt-set-name;
+  --color-set-id: $color-lt-set-id;
+  --color-set-background: $color-lt-set-background;
+  --color-set-border: $color-lt-set-border;
+  --color-set-border--hover: $color-lt-set-border--hover;
+  --color-set-item: $color-lt-set-item;
+  --color-set-item--hover: $color-lt-set-item--hover;
+
+  --color-button-text: $color-lt-button-text;
+  --color-button-text--hover: $color-lt-button-text--hover;
+  --color-button-background: $color-lt-button-background;
+  --color-button-background--hover: $color-lt-button-background--hover;
+  --color-button-border: $color-lt-button-border;
+  --color-button-border--hover: $color-lt-button-border--hover;
+
+  --color-button-text--nav: $color-lt-button-text--nav;
+  --color-button-background--nav: $color-lt-button-background--nav;
+  --color-button-border--nav: $color-lt-button-border--nav;
+
+  --color-search-text-placeholder: $color-lt-search-text-placeholder;
+  --color-search-background: $color-lt-search-background;
+
+  --color-settings-background: $color-lt-settings-background;
+  --color-input-text: $color-lt-input-text;
+  --color-input-text-placeholder: $color-lt-input-text-placeholder;
+  --color-input-background: $color-lt-input-background;
+  --color-input-border: $color-lt-input-border;
+  --color-input-border--focus: $color-lt-input-border--focus;
+
+  --color-plugin-text: $color-lt-plugin-text;
+  --color-plugin-row-odd: $color-lt-plugin-row-odd;
+  --color-plugin-row-even: $color-lt-plugin-row-even;
+}
+
+.theme-light { @include theme-light; }
+
+
+/**
+ * Select theme by OS preference
+ *
+ * Note: Currently not used, because even with 'no-preference', Safari on older
+ *       systems always uses the light version.
+ */
+
+/*
+@media (prefers-color-scheme: light) {
+  :root { @include theme-light; }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root { @include theme-default; }
+}
+*/

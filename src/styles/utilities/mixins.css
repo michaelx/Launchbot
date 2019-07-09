@@ -1,0 +1,47 @@
+/* Mixins */
+
+
+/**
+ * Clearfix
+ *
+ * Clears floats.
+ */
+@mixin clearfix {
+  &::before {
+    content: "";
+    display: table;
+  }
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+/* Horizontal center content */
+@mixin centered {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+/**
+ * Containers
+ *
+ * Stick to the container sizes defined in variables.css.
+ */
+@mixin container($container-size, $operator, $padding) {
+  max-width: calc($container-size $operator $padding);
+}
+
+
+/**
+ * Animations
+ *
+ * Uses the defined animation speed and style from variables.css.
+ */
+@mixin transition($property) {
+  transition: $property $transition-duration $transition-timing;
+}

@@ -1,0 +1,66 @@
+/* Base typography styles */
+
+
+/**
+ * Headings
+ *
+ * Heading tags (h1, h2, etc.) are only used to set the base.
+ * They are otherwise not directly styled. Instead, classes are
+ * used to allow styles to be completely separated from document
+ * semantics.
+ *
+ * Components can have their own heading styles!
+ */
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-weight: $font-weight-normal;
+  line-height: $heading-line-height;
+}
+
+
+/* General headings */
+.h2,
+.h3,
+.h4 {
+  margin-bottom: 1rem;
+
+  font-weight: $font-weight-normal;
+  color: var(--color-heading);
+}
+
+
+.h2 {
+  font-size: 1.25em;
+
+  @media only screen and (min-width: $screen-m) {
+    font-size: 1.5em;
+  }
+}
+
+
+.h3 {
+  font-size: 1em;
+
+  @media only screen and (min-width: $screen-m) {
+    font-size: 1.25em;
+  }
+
+  @media only screen and (min-width: $screen-l) {
+    font-size: 1.375em;
+  }
+}
+
+
+.h4 { font-size: 1em; }
+
+
+/* Default paragraph style */
+p {
+  margin-top: 0;
+  margin-bottom: 1.2em;
+}

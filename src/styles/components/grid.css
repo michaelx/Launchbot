@@ -1,0 +1,33 @@
+/* Grid styles */
+
+
+/* Base grid style */
+.grid { list-style: none; }
+
+
+/**
+ * Default grid item style
+ *
+ * Full-wide until $screen-xl, then 2 columns, then 3.
+ */
+.grid__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  padding: 0 1em 2em;
+
+  @media only screen and (min-width: $screen-l) {
+    padding: 0 2em 2.5em;
+  }
+
+  @media only screen and (min-width: $screen-xl) {
+    width: 50%;
+    &:nth-child(odd) { padding-right: 1.5em; }
+    &:nth-child(even) { padding-left: 1.5em; }
+  }
+
+  @media only screen and (min-width: $screen-xxl) {
+    width: 33.33%;
+    &:nth-child(n) { padding: 0 2em 4em; }
+  }
+}

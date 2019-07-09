@@ -1,0 +1,4 @@
+src/js/config.js
+
+# Ignored because https://github.com/eslint/eslint/issues/11486
+src/js/components/pluginLoader.js

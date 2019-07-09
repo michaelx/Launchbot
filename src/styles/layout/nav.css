@@ -1,0 +1,43 @@
+/* Navigation styles */
+
+
+/* Navigation container */
+.nav { @include clearfix; }
+
+
+/* Nav search element */
+.nav__search {
+  float: left;
+
+  &:focus-within { width: 100%; } /* Full-wide on focus */
+
+  @media only screen and (min-width: $screen-m) {
+    &:focus-within { width: auto; } /* Reset to input style */
+  }
+}
+
+
+/* Navigation list container */
+.nav-list {
+  float: right;
+  list-style: none;
+}
+
+.nav-list__item {
+  display: inline-block;
+  padding: 0 .5em;
+
+  letter-spacing: .025em;
+
+  &:last-child { padding-right: 0; }
+
+  @media only screen and (min-width: $screen-m) {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+
+  @media only screen and (min-width: $screen-xl) {
+    padding-right: 1.25em;
+    padding-left: 1.25em;
+  }
+}

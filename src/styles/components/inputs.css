@@ -1,0 +1,124 @@
+/* Input styles */
+
+
+/* Default input style */
+.input {
+  display: block;
+  width: 100%;
+  padding: .75rem;
+
+  line-height: 1.5;
+  text-align: left;
+  color: var(--color-input-text);
+
+  border: 2px solid var(--color-input-border);
+  border-radius: 0; /* Resets round search inputs on iOS */
+  background-color: var(--color-input-background);
+
+  appearance: none; /* Removes platform specific styling */
+
+  &::placeholder {
+    color: var(--color-input-text-placeholder);
+  }
+
+  &:focus {
+    border-color: var(--color-input-border--focus);
+    outline: 0;
+  }
+
+  @media only screen and (min-width: $screen-l) {
+    font-size: $font-size-small;
+  }
+}
+
+
+/* Modifier for search */
+.input--search {
+  width: 10rem;
+
+  letter-spacing: .025rem;
+  text-overflow: ellipsis;
+
+  border: 2px solid transparent;
+  border-radius: $border-radius;
+  background-color: var(--color-search-background);
+
+  &::placeholder {
+    color: var(--color-search-text-placeholder);
+  }
+
+  &:focus {
+    width: 100%;
+    color: var(--color-button-text--hover);
+    border-color: var(--color-button-border--hover);
+
+    &::placeholder {
+      color: var(--color-button-text--hover);
+    }
+
+    @include transition(all);
+  }
+
+  @media only screen and (min-width: $screen-m) {
+    width: 20rem;
+    &:focus { width: 25rem; }
+  }
+}
+
+
+/* Modifier for inputs on the settings page */
+.input--settings {
+  max-width: 25rem;
+
+  &:disabled { border-color: transparent; }
+}
+
+
+/* Modifier for Launchbot Set input fields */
+.input--set {
+  max-width: 100%;
+  border-bottom: 0;
+}
+
+
+/* Default input label style */
+.input-label {
+  display: block;
+  max-width: 100%;
+  padding-bottom: .25rem;
+
+  font-size: $font-size-small;
+}
+
+
+/* Default textarea style */
+.textarea {
+  display: block;
+  width: 100%;
+  height: 10rem;
+  padding: .75rem;
+
+  resize: vertical;
+
+  font-size: $font-size-small;
+  line-height: 1.5;
+  text-align: left;
+  color: var(--color-input-text);
+
+  border: 2px solid var(--color-input-border);
+  background-color: var(--color-input-background);
+
+  appearance: none; /* Removes platform specific styling */
+
+  &::placeholder {
+    color: var(--color-input-text-placeholder);
+  }
+
+  &:focus {
+    border-color: var(--color-input-border--focus);
+    outline: 0;
+  }
+}
+
+/* Modifier for larger textareas */
+.textarea--large { height: 20rem; }

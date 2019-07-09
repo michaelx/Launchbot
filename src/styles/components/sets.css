@@ -1,0 +1,94 @@
+/* Launchbot set styles */
+
+
+/* Default set style */
+.set {
+  position: relative;
+  padding: 1em .625em .75em; /* px and pb: to balance with list of set-item’s */
+
+  text-align: left;
+
+  border: 2px solid var(--color-set-border);
+  border-radius: $border-radius;
+  background-color: var(--color-set-background);
+
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--color-set-border--hover);
+  }
+
+  @media only screen and (min-width: $screen-l) {
+    padding: 1.5em .75em 1em;
+  }
+}
+
+
+/* Set name element */
+.set__name {
+  display: block;
+
+  /* r: spacing for .set__id; l: to balance with list of set-item’s */
+  padding: 0 1.375rem 1rem .375rem;
+
+  font-size: 1em;
+  font-weight: $font-weight-bold;
+  letter-spacing: .025em;
+  line-height: 1.3;
+  color: var(--color-set-name);
+
+  @media only screen and (min-width: $screen-l) {
+    padding: 0 2.5rem 1.5rem .75rem;
+    font-size: 1.125em;
+  }
+}
+
+
+/* Set id element */
+.set__id {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  padding-top: 2px; /* to align with set__name */
+
+  font-size: $font-size-small;
+  line-height: 1.3; /* to align with set__name */
+  color: var(--color-set-id);
+
+  @media only screen and (min-width: $screen-l) {
+    top: 1.5em;
+    right: 1.5em;
+    padding-top: .375rem;
+  }
+}
+
+
+/**
+ * Set item
+ *
+ * Item within a set. These are your configured URL’s displayed as images
+ * with a border.
+ */
+.set-item {
+  display: inline-block;
+  padding: 0 .375em .75em;
+
+  @media only screen and (min-width: $screen-l) {
+    padding: 0 .75em 1.5em;
+  }
+}
+
+.set-item__img {
+  border: .75em solid var(--color-set-item);
+  border-radius: 50%;
+  background-color: var(--color-set-item);
+
+  &:hover {
+    border-color: var(--color-set-item--hover);
+    background-color: var(--color-set-item--hover);
+  }
+
+  @media only screen and (min-width: $screen-l) {
+    border-width: 1em;
+  }
+}

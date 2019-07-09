@@ -1,0 +1,23 @@
+/* Content styles */
+
+
+/**
+ * Content wrapper
+ *
+ * Margin to footer.
+ */
+.content-wrapper {
+  margin-bottom: $spacing-content-s;
+
+  @media only screen and (min-width: $screen-m) {
+    margin-bottom: $spacing-content-m;
+  }
+
+  @media only screen and (min-width: $screen-l) {
+    margin-bottom: $spacing-content-l;
+  }
+
+  @media only screen and (min-width: $screen-xl) {
+    margin-bottom: $spacing-content-xl;
+  }
+}

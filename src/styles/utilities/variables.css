@@ -1,0 +1,160 @@
+/* Variables */
+
+
+/* Font base */
+$base-font:        SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+$base-font-size:   1em;
+$base-line-height: 1.5;
+
+/* Font weights */
+$font-weight-normal: 400;
+$font-weight-bold:   600;
+
+/* Alternative font sizes */
+$font-size-small: .875rem; /* 14px */
+
+/* Headings */
+$heading-line-height: 1.3;
+
+
+/* Border */
+$border-radius: 4px;
+
+
+/* Animations */
+$transition-duration: .15s;
+$transition-timing:   ease-in;
+
+
+/* Breakpoints, in t-shirt sizes */
+$screen-s:   20em;   /* 320px */
+$screen-m:   35.5em; /* 568px */
+$screen-l:   48em;   /* 768px */
+$screen-xl:  64em;   /* 1024px */
+$screen-xxl: 90em;   /* 1680px */
+
+
+/**
+ * Containers
+ *
+ * rem unit to keep it independent from its parent element font-size.
+ */
+$container-text: 43.75rem; /* 700px */
+$container-max:  120rem;   /* 1920px */
+
+
+/* Spacing from header to content (per breakpoint) */
+$spacing-header-s:   3em;   /* 48px */
+$spacing-header-l:   4em;   /* 64px */
+$spacing-header-xl:  4.5em; /* 72px */
+$spacing-header-xxl: 6em;   /* 96px */
+
+
+/* Spacing from content to footer (per breakpoint) */
+$spacing-content-s:   4em;  /* 64px */
+$spacing-content-m:   6em;  /* 96px */
+$spacing-content-l:   8em;  /* 128px */
+$spacing-content-xl:  12em; /* 192px */
+$spacing-content-xxl: $spacing-content-xl;
+
+
+/**
+ * Dark theme colors
+ *
+ * Default theme.
+ */
+
+/* General */
+$color-text:       #dfe1e8;
+$color-heading:    rgb(201,168,250);
+$color-background: #131318;
+
+/* Colors: Sets */
+$color-set-name:          $color-text;
+$color-set-id:            rgba(201,168,250,.24);
+$color-set-background:    #0f0f14;
+$color-set-border:        rgba(201,168,250,.08);
+$color-set-border--hover: $color-heading;
+$color-set-item:          #16161d;
+$color-set-item--hover:   $color-text;
+
+/* Colors: Buttons */
+$color-button-text:              $color-heading;
+$color-button-text--hover:       #99ecfd;
+$color-button-background:        transparent;
+$color-button-background--hover: transparent;
+$color-button-border:            $color-heading;
+$color-button-border--hover:     $color-button-text--hover;
+
+/* Colors: Nav buttons */
+$color-button-text--nav:       $color-button-text;
+$color-button-background--nav: $color-button-background;
+$color-button-border--nav:     $color-set-border;
+
+/* Colors: Search bar */
+$color-search-text-placeholder: $color-heading;
+$color-search-background:       #1a1922;
+
+/* Colors: Settings page */
+$color-settings-background:    $color-set-background;
+$color-input-text:             $color-set-name;
+$color-input-text-placeholder: $color-heading;
+$color-input-background:       $color-search-background;
+$color-input-border:           $color-set-border;
+$color-input-border--focus:    $color-text;
+
+/* Colors: Default plugins */
+$color-plugin-text:     #c0c5ce;
+$color-plugin-row-odd:  $color-set-item;
+$color-plugin-row-even: #1a1922;
+
+
+/**
+ * Light theme colors
+ *
+ * Alternative theme.
+ */
+
+/* General */
+$color-lt-text:       #4f5b66;
+$color-lt-heading:    $color-lt-text;
+$color-lt-background: #f8fbff;
+
+/* Colors: Sets */
+$color-lt-set-name:          $color-lt-text;
+$color-lt-set-id:            #dfe1e8;
+$color-lt-set-background:    #fbfdff;
+$color-lt-set-border:        rgba(153,236,253,.16);
+$color-lt-set-border--hover: rgb(153,236,253);
+$color-lt-set-item:          #eff1f5;
+$color-lt-set-item--hover:   $color-lt-text;
+
+/* Colors: Buttons */
+$color-lt-button-text:              $color-lt-text;
+$color-lt-button-text--hover:       $color-lt-set-name;
+$color-lt-button-background:        $color-lt-set-item;
+$color-lt-button-background--hover: $color-lt-button-background;
+$color-lt-button-border:            transparent;
+$color-lt-button-border--hover:     $color-lt-set-border--hover;
+
+/* Colors: Nav buttons */
+$color-lt-button-text--nav:       #a7adba;
+$color-lt-button-background--nav: $color-lt-button-background;
+$color-lt-button-border--nav:     transparent;
+
+/* Colors: Search bar */
+$color-lt-search-text-placeholder: $color-lt-button-text--nav;
+$color-lt-search-background:       $color-lt-set-item;
+
+/* Colors: Settings page */
+$color-lt-settings-background:    $color-lt-set-background;
+$color-lt-input-text:             $color-lt-set-name;
+$color-lt-input-text-placeholder: $color-lt-search-text-placeholder;
+$color-lt-input-background:       $color-lt-set-item;
+$color-lt-input-border:           $color-lt-set-border;
+$color-lt-input-border--focus:    $color-lt-button-border--hover;
+
+/* Colors: Default plugins */
+$color-lt-plugin-text:     $color-lt-button-text--nav;
+$color-lt-plugin-row-odd:  $color-lt-set-background;
+$color-lt-plugin-row-even: $color-lt-set-item;

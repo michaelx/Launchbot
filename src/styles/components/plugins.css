@@ -1,0 +1,32 @@
+/* Styles for default plugins */
+
+
+/* Default plugin style */
+.plugins {
+  max-width: $container-max;
+
+  font-size: $font-size-small;
+  list-style: none;
+  color: var(--color-plugin-text);
+
+  @include container($container-max, -, 4rem);
+  @include centered;
+}
+
+
+/* Plugin element */
+.plugins__item {
+  padding: .5em 1em;
+
+  &:nth-child(odd) {
+    background-color: var(--color-plugin-row-odd);
+  }
+  &:nth-child(even) {
+    background-color: var(--color-plugin-row-even);
+  }
+
+  @media only screen and (min-width: $screen-l) {
+    padding-right: 2em;
+    padding-left: 2em;
+  }
+}

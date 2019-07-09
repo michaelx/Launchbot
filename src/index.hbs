@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Launchbot &ndash; Your Personal Startpage</title>
+
+  <meta name="description" content="Self-hosted open source startpage. Open collections of websites with one click. It’s like restoring tabs, but anywhere.">
+  <meta name="keywords" content="Launchbot, Startpage App, Michael Xander, Dashboard, Open Source">
+  <meta name="robots" content="INDEX, FOLLOW">
+</head>
+
+
+<body>
+  <div class="site-wrapper">
+
+
+    <header class="header">
+
+      <nav class="nav">
+        <form id="js-search-form" class="nav__search" method="get" action="https://www.google.com/search">
+          <input id="js-search-text" class="input input--search" name="q" type="search" placeholder="Search the web" autocomplete="off" aria-label="Search the web">
+        </form>
+
+        <ul class="nav-list">
+          <li class="nav-list__item">
+            <a id="js-settings-button" class="button button--nav" href="#js-settings">Settings</a>
+          </li>
+        </ul>
+      </nav>
+
+    </header>
+
+
+    <main class="content-wrapper">
+      <section class="u-text-center">
+        <ul id="js-sets" class="grid"></ul>
+        <noscript>Error: Launchbot requires JavaScript.</noscript>
+      </section>
+    </main>
+
+
+    <footer id="js-footer" class="footer">
+      <ul id="js-plugins-default" class="plugins"></ul>
+    </footer>
+
+
+    <section id="js-settings" class="settings">
+
+      <div class="settings__intro">
+        <h2 class="h2">Settings</h2>
+        <p>
+          If you’re new to Launchbot, please refer to the <a class="link" href="https://github.com/michaelx/Launchbot#settings" target="_blank" rel="noopener">documentation</a> to look up all available settings. At the moment there are no input validations, if the documentation isn’t enough I’ll add it.
+        </p>
+      </div>
+
+
+      <form class="settings-form">
+
+        <div class="settings-form__group">
+          <h2 class="h2">Sets</h2>
+          <ul id="js-settings-sets" class="settings-form-list"></ul>
+          <a id="js-settings-add-set" class="button button--small">Add a set</a>
+        </div>
+
+        <div class="settings-form__group">
+          <h2 class="h2">Options</h2>
+          <ul id="js-settings-options" class="settings-form-list"></ul>
+        </div>
+
+        <div class="settings-form__group">
+          <h2 class="h2">Plugins</h2>
+          <div id="js-settings-plugins"></div>
+        </div>
+
+        <hr>
+
+        <ul class="button-set">
+          <li class="button-set__item">
+            <input id="js-settings-save" class="button" type="submit" value="Save">
+          </li><!--
+          --><li class="button-set__item">
+            <input id="js-settings-restore" class="button" type="submit" value="Restore embedded config">
+          </li><!--
+          --><li class="button-set__item">
+            <input id="js-settings-cancel" class="button" type="submit" value="Cancel">
+          </li>
+        </ul>
+
+      </form>
+
+
+      <div class="settings__export">
+        <h2 class="h2">Export config</h2>
+        <p>
+          Below is the currently used config. Copy it to make a backup. You can
+          make it your default embedded config for all builds by replacing the
+          content of “/src/js/config.js” with it.
+        </p>
+        <textarea id="js-settings-export" class="textarea textarea--large"></textarea>
+      </div>
+
+
+      <div class="settings__about">
+        <h2 class="h2">About Launchbot</h2>
+        <p>
+          Launchbot is free and <a class="link" href="https://github.com/michaelx/Launchbot" target="_blank" rel="noopener">open source</a>. It’s easy to self-host. I’ve been using it almost daily in my morning routine for over eight years. I hope you’ll find it helpful too. —<a class="link u-text-bold" href="https://michaelxander.com" target="_blank" rel="noopener">Michael Xander</a>
+        </p>
+      </div>
+
+    </section>
+
+
+  </div>
+
+
+  <div id="js-welcome-modal" class="modal">
+    <div class="modal__content">
+      <h2 class="h2">Welcome to Launchbot</h2>
+      <p>
+        A startpage to open collections of websites with one click. It’s like restoring tabs, but anywhere. Things to know:
+      </p>
+      <ol class="list">
+        <li>
+          Open the Settings to customize your collections, manage plugins, and to adjust options.
+        </li>
+        <li>
+          Keyboard shortcuts: '1' to '9' (open set), 's' or '/' (search).
+        </li>
+        <li>
+          You need to allow pop-ups from Launchbot. Your browser should prompt you.
+        </li>
+        <li>
+          Your data is only stored in your browser’s localStorage. It will remain there until you manually delete it.
+        </li>
+        <li>
+          Launchbot is free and open source. It’s easy to self-host.
+        </li>
+        <li>
+          You can create your own embedded default config for all devices, so that you don’t have to set things up twice. Learn more about it on <a class="link" href="https://github.com/michaelx/Launchbot#self-host-launchbot" target="_blank" rel="noopener">GitHub</a>.
+        </li>
+      </ol>
+      <button id="js-welcome-dismiss" class="button">Let’s start!</button>
+    </div>
+  </div>
+
+
+</body>
+
+
+</html>
