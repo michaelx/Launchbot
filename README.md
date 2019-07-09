@@ -62,7 +62,7 @@ These are your collections of websites. You can add as many as you want. Enter o
 ### Options
 
 Key | Values | Description
-:------- | :-----
+:------- | :----- | :-----
 darkMode | `true` or `false` | Enable dark mode or use light theme.
 searchEngine | URL as String | Search engine to use.
 faviconSize | Integer | Size of website icons.
