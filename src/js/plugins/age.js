@@ -17,7 +17,7 @@ const renderAge = () => {
   // Inspired by:
   // Alex MacCaw https://github.com/maccman/motivation
   const now = new Date();
-  const age = (now - new Date(birthday)) / 3.154e+10; // divided by 1 year in ms
+  const age = (now - new Date(birthday)) / 3.1556952e+10; // divided by 1 year in ms
   let remainder = 100 - (age / goal * 100);
 
   let goalPrefix = 'left until';
