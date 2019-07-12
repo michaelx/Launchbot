@@ -43,6 +43,10 @@ You can also create your own embedded default config, so that you don’t have t
 2. Create a new build: `npm run build`
 3. Upload the files in the folder `dist`.
 
+### Upgrading
+
+`git pull`, or download the latest release and replace your copy with it. If an embedded default config is used, make sure to make a backup of it, or `stage` and `merge` it.
+
 ## Keyboard shortcuts
 
 Shortcut | Action
