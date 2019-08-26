@@ -4,7 +4,12 @@ const pluginsDefaultDOM = document.getElementById('js-plugins-default');
 // Link style with favicon
 export function formatItemBar(item, config) {
   return `<li class="set-item">
-    <a href="${item}" title="${item}" target="${config.options.linkTarget}">
+    <a
+      class="js-set-item-link"
+      href="${item}"
+      title="${item}"
+      target="${config.options.linkTarget}"
+    >
       <img
         class="set-item__img"
         src="${config.options.faviconService + item}"

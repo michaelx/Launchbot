@@ -1,4 +1,5 @@
 const searchDOM = document.getElementById('js-search-text');
+const setItemsDOM = document.getElementsByClassName('js-set-item-link');
 const setsDOM = document.getElementsByClassName('set');
 const settingsDOM = document.getElementById('js-settings');
 
@@ -45,4 +46,12 @@ export default function (launchbot) {
       if (event.key === 'Escape') searchDOM.blur();
     });
   }
+
+
+  // Stop set item events from bubbling up
+  Array.from(setItemsDOM).forEach((item) => {
+    item.addEventListener('click', (event) => {
+      event.stopPropagation();
+    });
+  });
 }
