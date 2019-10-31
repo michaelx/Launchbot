@@ -67,15 +67,15 @@ $spacing-content-xxl: $spacing-content-xl;
 /* General */
 $color-text:       #dfe1e8;
 $color-heading:    rgb(201,168,250);
-$color-background: #131318;
+$color-background: #0f0f14;
 
 /* Colors: Sets */
 $color-set-name:          $color-text;
 $color-set-id:            rgba(201,168,250,.24);
-$color-set-background:    #0f0f14;
+$color-set-background:    #131318;
 $color-set-border:        rgba(201,168,250,.08);
 $color-set-border--hover: $color-heading;
-$color-set-item:          #16161d;
+$color-set-item:          #1a1922;
 $color-set-item--hover:   $color-text;
 
 /* Colors: Buttons */
@@ -93,7 +93,7 @@ $color-button-border--nav:     $color-set-border;
 
 /* Colors: Search bar */
 $color-search-text-placeholder: $color-heading;
-$color-search-background:       #1a1922;
+$color-search-background:       $color-set-item;
 
 /* Colors: Settings page */
 $color-settings-background:    $color-set-background;
@@ -105,8 +105,8 @@ $color-input-border--focus:    $color-text;
 
 /* Colors: Default plugins */
 $color-plugin-text:     #c0c5ce;
-$color-plugin-row-odd:  $color-set-item;
-$color-plugin-row-even: #1a1922;
+$color-plugin-row-odd:  #16161d;
+$color-plugin-row-even: $color-set-item;
 
 
 /**

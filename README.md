@@ -133,11 +133,11 @@ Safari on iOS only allows one new tab per action. If thereâ€™s enough demand, Iâ
 
 **Dark** *(default)*
 
-![Dark theme](https://i.imgur.com/wzVczke.png)
+![Dark theme](https://github.com/michaelx/launchbot/blob/master/docs/screenshots/theme-dark.png?raw=true)
 
 **Light**
 
-![Light theme](https://i.imgur.com/Fx2Gt3u.png)
+![Light theme](https://github.com/michaelx/launchbot/blob/master/docs/screenshots/theme-light.png?raw=true)
 
 ## Author
 
