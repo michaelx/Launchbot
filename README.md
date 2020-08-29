@@ -43,6 +43,8 @@ You can also create your own embedded default config, so that you don’t have t
 2. Create a new build: `npm run build`
 3. Upload the files in the folder `dist`.
 
+> **Note:** If you opened Launchbot before changing the embedded config, that config will be stored in `localStorage`. If you then change the embedded config and create a new build you have to reset it in the UI by clicking `Settings > Restore embedded config`.
+
 ### Upgrading
 
 `git pull`, or download the latest release and replace your copy with it. If an embedded default config is used, make sure to make a backup of it, or `stage` and `merge` it.
